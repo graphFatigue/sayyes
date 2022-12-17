@@ -1,0 +1,118 @@
+﻿@using sayyes.Domain.Entity
+@model List<Author>
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<style>
+    .card-buttons-group {
+        text-align: right;
+        padding: 10px;
+    }
+</style>
+
+<div class="card-buttons-group">
+    <button class="btn btn-danger" id='hideCardsId'>Сховати</button>
+    <button class='btn btn-success' id='showCardsId'>Показати</button>
+    <a asp-controller="Author" asp-action="Save" asp-route-id="0" class="btn btn-primary">
+        <img src="https://www.pngall.com/wp-content/uploads/10/Plus-Symbol-Vector-PNG-Cutout.png" width="30"
+             class="img-fluid rounded-start rounded">
+    </a>
+</div>
+
+<div style="padding: 10px;"></div>
+@if (Model.Count == 0)
+{
+    <div class="card col-md-12">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Joan_Baez_Bob_Dylan_crop.jpg/300px-Joan_Baez_Bob_Dylan_crop.jpg"
+                 class="img-fluid rounded-start rounded">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Список виконавців пустий :(</h5>
+                    <p class="card-text">
+                        Список пополнится позже, не расстраивайтесь
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="padding: 10px;"></div>
+    <div class="card text-center">
+        <div class="card-header">
+            <ul class="nav nav-pills card-header-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+}
+else
+{
+    <div class="row">
+        @foreach (var author in Model)
+        {
+            <div class="row row-cols-1 col-md-4 text-center">
+                <div class="col" style="padding: 10px;">
+                    <div class="card">
+                        <img src=@author.Biography class="card-img-top" alt="@author.Name">
+                        <div class="card-body">
+                            <h5 class="card-title">@author.Name</h5>
+                            <p class="card-text">@author.Surname</p>
+                            <p class="card-text">@author.DateOfBirth</p>
+                        </div>
+
+                        <div class="card-body">
+                            <a asp-action="GetAuthor" asp-route-id="@author.Id" class="card-link">Перейти</a>
+
+
+                            <hr />
+                            <a asp-controller="Author" asp-action="Delete" asp-route-id="@author.Id" class="btn btn-danger">
+                                <img src="https://cdn-icons-png.flaticon.com/512/17/17047.png" width="30"
+                             class="img-fluid rounded-start rounded">
+                            </a>
+                            <a asp-controller="Author" asp-action="Save" asp-route-id="@author.Id" class="btn btn-primary">Редагувати</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@section pageScripts {
+    <script>
+        const hideCardElement = $('#hideCardsId');
+        const showCardElement = $('#showCardsId');
+        const cardElement = $('.card');
+
+        const interval = 2000;
+
+        hideCardElement.click(function(){
+            hideCardElement.hide(interval);
+            showCardElement.show(interval);
+            cardElement.hide(interval);
+        });
+
+        showCardElement.click(function () {
+            hideCardElement.show(interval);
+            showCardElement.hide(interval);
+            cardElement.show(interval);
+        });
+    </script>
+}

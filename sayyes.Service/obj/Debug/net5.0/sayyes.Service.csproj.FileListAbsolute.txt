@@ -1,0 +1,17 @@
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\obj\Debug\net5.0\sayyes.Service.csproj.AssemblyReference.cache
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\obj\Debug\net5.0\sayyes.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\obj\Debug\net5.0\sayyes.Service.AssemblyInfoInputs.cache
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\obj\Debug\net5.0\sayyes.Service.AssemblyInfo.cs
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\obj\Debug\net5.0\sayyes.Service.csproj.CoreCompileInputs.cache
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\bin\Debug\net5.0\sayyes.Service.deps.json
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\bin\Debug\net5.0\sayyes.Service.dll
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\bin\Debug\net5.0\sayyes.Service.pdb
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\bin\Debug\net5.0\sayyes.DAL.dll
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\bin\Debug\net5.0\sayyes.Domain.dll
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\bin\Debug\net5.0\sayyes.DAL.pdb
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\bin\Debug\net5.0\sayyes.Domain.pdb
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\obj\Debug\net5.0\sayyes.Service.csproj.CopyComplete
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\obj\Debug\net5.0\sayyes.Service.dll
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\obj\Debug\net5.0\refint\sayyes.Service.dll
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\obj\Debug\net5.0\sayyes.Service.pdb
+C:\Users\Mary\source\repos\sayyes\sayyes.Service\obj\Debug\net5.0\ref\sayyes.Service.dll

@@ -1,0 +1,55 @@
+﻿@using System;
+@using System.Collections;
+@using System.Globalization;
+@using sayyes.Domain.Entity;
+@model sayyes.Domain.ViewModels.Author.AuthorViewModel
+
+@{
+    ViewData["Title"] = "Search";
+    Layout = "_Layout";
+}
+
+@{
+    Countries countries = new Countries();
+    countries.SetList();
+    var countryList = countries.cultureList;
+
+}
+
+
+<div style="padding: 10px;"></div>
+<div class="col-md-12">
+    <div class="card-body">
+        <div class="card card-outline-secondary" style="background-color: white">
+            <div class="card-header">
+                <h3 class="mb-0 text-center ParagraphHome">Пошук виконавця</h3>
+            </div>
+            <div class="card-body">
+                <form asp-action="Search" enctype="multipart/form-data">
+                    <div asp-validation-summary="All" style="font-size:23px; font-family:Impact, serif" class="text-danger text-center"></div>
+                    <div class="form-group">
+                        <label asp-for="Name" style="color:black">Ім'я виконавця</label>
+                        <input asp-for="Name" class="form-control" id="validationServer01" type="text" placeholder="Введите ім'я виконавця...">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault04" style="color:black" class="form-label">Країна</label>
+                        <select asp-for="Nationality" style="align-content" class="form-select" id="validationDefault04">
+                            <option selected disabled value="">Оберіть...</option>
+                            @foreach (var country in countryList)
+                            {
+                                <option>@country</option>
+                            }
+
+                        </select>
+                    </div>
+
+
+                    <button class="btn btn-primary btn-lg float-right" type="submit">
+                        <img src="https://free-png.ru/wp-content/uploads/2021/07/free-png.ru-44.png" width="30"
+                             class="img-fluid rounded-start rounded">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

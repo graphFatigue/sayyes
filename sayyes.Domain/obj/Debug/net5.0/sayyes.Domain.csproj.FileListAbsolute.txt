@@ -1,0 +1,12 @@
+C:\Users\Mary\source\repos\sayyes\sayyes.Domain\bin\Debug\net5.0\sayyes.Domain.deps.json
+C:\Users\Mary\source\repos\sayyes\sayyes.Domain\bin\Debug\net5.0\sayyes.Domain.dll
+C:\Users\Mary\source\repos\sayyes\sayyes.Domain\bin\Debug\net5.0\sayyes.Domain.pdb
+C:\Users\Mary\source\repos\sayyes\sayyes.Domain\obj\Debug\net5.0\sayyes.Domain.csproj.AssemblyReference.cache
+C:\Users\Mary\source\repos\sayyes\sayyes.Domain\obj\Debug\net5.0\sayyes.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mary\source\repos\sayyes\sayyes.Domain\obj\Debug\net5.0\sayyes.Domain.AssemblyInfoInputs.cache
+C:\Users\Mary\source\repos\sayyes\sayyes.Domain\obj\Debug\net5.0\sayyes.Domain.AssemblyInfo.cs
+C:\Users\Mary\source\repos\sayyes\sayyes.Domain\obj\Debug\net5.0\sayyes.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Mary\source\repos\sayyes\sayyes.Domain\obj\Debug\net5.0\sayyes.Domain.dll
+C:\Users\Mary\source\repos\sayyes\sayyes.Domain\obj\Debug\net5.0\refint\sayyes.Domain.dll
+C:\Users\Mary\source\repos\sayyes\sayyes.Domain\obj\Debug\net5.0\sayyes.Domain.pdb
+C:\Users\Mary\source\repos\sayyes\sayyes.Domain\obj\Debug\net5.0\ref\sayyes.Domain.dll

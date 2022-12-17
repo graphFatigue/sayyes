@@ -1,0 +1,23 @@
+﻿@using sayyes.Domain.Entity
+@model Author
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div style="padding: 10px;"></div>
+<div class="card mb-3">
+    <div class="row g-0">
+        <div class="col-md-5">
+            <img src=https://upload.wikimedia.org/wikipedia/commons/8/8f/Rammstein_Engel_London.JPG
+                 class="img-fluid rounded-start rounded">
+        </div>
+        <div class="col-md-7">
+            <div class="card-body">
+                <h2 class="display-4">Ласкаво просимо на BeStill</h2>
+                <p class="card-text"><b></b>Тут ви зможете в текстовому вигляді з ілюстраціями вести свій щоденник меломана!</p>
+                <a asp-controller="Author" asp-action="GetAuthors" class="btn btn-outline-success">Перейти до виконавців</a>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,15 @@
+C:\Users\Mary\source\repos\sayyes\sayyes.DAL\bin\Debug\net5.0\sayyes.DAL.deps.json
+C:\Users\Mary\source\repos\sayyes\sayyes.DAL\bin\Debug\net5.0\sayyes.DAL.dll
+C:\Users\Mary\source\repos\sayyes\sayyes.DAL\bin\Debug\net5.0\sayyes.DAL.pdb
+C:\Users\Mary\source\repos\sayyes\sayyes.DAL\bin\Debug\net5.0\sayyes.Domain.dll
+C:\Users\Mary\source\repos\sayyes\sayyes.DAL\bin\Debug\net5.0\sayyes.Domain.pdb
+C:\Users\Mary\source\repos\sayyes\sayyes.DAL\obj\Debug\net5.0\sayyes.DAL.csproj.AssemblyReference.cache
+C:\Users\Mary\source\repos\sayyes\sayyes.DAL\obj\Debug\net5.0\sayyes.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mary\source\repos\sayyes\sayyes.DAL\obj\Debug\net5.0\sayyes.DAL.AssemblyInfoInputs.cache
+C:\Users\Mary\source\repos\sayyes\sayyes.DAL\obj\Debug\net5.0\sayyes.DAL.AssemblyInfo.cs
+C:\Users\Mary\source\repos\sayyes\sayyes.DAL\obj\Debug\net5.0\sayyes.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Mary\source\repos\sayyes\sayyes.DAL\obj\Debug\net5.0\sayyes.DAL.csproj.CopyComplete
+C:\Users\Mary\source\repos\sayyes\sayyes.DAL\obj\Debug\net5.0\sayyes.DAL.dll
+C:\Users\Mary\source\repos\sayyes\sayyes.DAL\obj\Debug\net5.0\refint\sayyes.DAL.dll
+C:\Users\Mary\source\repos\sayyes\sayyes.DAL\obj\Debug\net5.0\sayyes.DAL.pdb
+C:\Users\Mary\source\repos\sayyes\sayyes.DAL\obj\Debug\net5.0\ref\sayyes.DAL.dll

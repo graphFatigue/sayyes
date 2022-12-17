@@ -1,0 +1,92 @@
+﻿@using sayyes.Domain.Entity
+@model List<Author>
+@{
+    ViewBag.Title = "Search Result";
+    Layout = "_Layout";
+}
+
+<style>
+    .card-buttons-group {
+        text-align: right;
+        padding: 10px;
+    }
+</style>
+
+<div class="card-buttons-group">
+    <button class="btn btn-danger" id='hideCardsId'>Сховати</button>
+    <button class='btn btn-success' id='showCardsId'>Показати</button>
+</div>
+
+<div style="padding: 10px;"></div>
+@if (Model is null)
+{
+    <div class="card col-md-12">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Joan_Baez_Bob_Dylan_crop.jpg/300px-Joan_Baez_Bob_Dylan_crop.jpg"
+                 class="img-fluid rounded-start rounded">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Список исполнителей пуст :(</h5>
+                    <p class="card-text">
+                        Список пополнится позже, не расстраивайтесь
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="row">
+        @foreach (var artist in Model)
+        {
+            <div class="row row-cols-1 col-md-4 text-center">
+                <div class="col" style="padding: 10px;">
+                    <div class="card">
+                        <img src=@artist.Avatar class="card-img-top" alt="@artist.Name">
+                        <div class="card-body">
+                            <h5 class="card-title">@artist.Name</h5>
+                            <p class="card-text">@artist.Biography</p>
+                        </div>
+
+                        <div class="card-body">
+                            <a asp-action="GetArtist" asp-route-id="@artist.Id" class="card-link">Перейти</a>
+
+
+                            <hr />
+                            <a asp-controller="Artist" asp-action="Delete" asp-route-id="@artist.Id" class="btn btn-danger">
+                                <img src="https://cdn-icons-png.flaticon.com/512/17/17047.png" width="30"
+                             class="img-fluid rounded-start rounded">
+                            </a>
+                            <a asp-controller="Artist" asp-action="Save" asp-route-id="@artist.Id" class="btn btn-primary">Редагувати</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@section pageScripts {
+    <script>
+        const hideCardElement = $('#hideCardsId');
+        const showCardElement = $('#showCardsId');
+        const cardElement = $('.card');
+
+        const interval = 2000;
+
+        hideCardElement.click(function () {
+            hideCardElement.hide(interval);
+            showCardElement.show(interval);
+            cardElement.hide(interval);
+        });
+
+        showCardElement.click(function () {
+            hideCardElement.show(interval);
+            showCardElement.hide(interval);
+            cardElement.show(interval);
+        });
+    </script>
+}

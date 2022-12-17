@@ -1,0 +1,100 @@
+﻿@using sayyes.Domain.Entity
+
+@model List<Book>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<style>
+    .card-buttons-group {
+        text-align: right;
+        padding: 10px;
+    }
+</style>
+
+<div class="card-buttons-group">
+    <button class="btn btn-danger" id='hideCardsId'>Сховати</button>
+    <button class='btn btn-success' id='showCardsId'>Показати</button>
+    <a asp-controller="Book" asp-action="Save" asp-route-id="0"  class="btn btn-primary">
+        <img src="https://www.pngall.com/wp-content/uploads/10/Plus-Symbol-Vector-PNG-Cutout.png" width="30"
+             class="img-fluid rounded-start rounded">
+    </a>
+</div>
+
+<div style="padding: 10px;"></div>
+
+@if (Model.FirstOrDefault().Title is not null)
+{
+
+    <div class="row">
+        @foreach (var album in Model)
+        {
+            <div class="row row-cols-1 col-md-4 text-center">
+                <div class="col" style="padding: 10px;">
+                    <div class="card">
+                        <img width="180" height="300" src=@album.Avatar class="card-img-top" alt="@album.Title">
+                        <div class="card-body">
+                            <h5 class="card-title">@album.Title</h5>
+                            <p class="card-text">@album.YearOfPublication</p>
+                        </div>
+                        <div class="card-body">
+                            <a asp-action="GetBook" asp-route-id="@album.Id" class="card-link">Перейти</a>
+
+
+                            <hr />
+                            <a asp-controller="Book" asp-action="Delete" asp-route-id="@album.Id"  class="btn btn-danger">
+                                <img src="https://cdn-icons-png.flaticon.com/512/17/17047.png" width="30"
+                             class="img-fluid rounded-start rounded">
+                            </a>
+                            <a asp-controller="Book" asp-action="Save" asp-route-id="@album.Id" class="btn btn-primary">Редагувати</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+
+else
+{
+    <div class="card col-md-12">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Joan_Baez_Bob_Dylan_crop.jpg/300px-Joan_Baez_Bob_Dylan_crop.jpg"
+                 class="img-fluid rounded-start rounded">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Список пустий :(</h5>
+                    <p class="card-text">
+                        Список пополнится позже, не расстраивайтесь
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section pageScripts {
+    <script>
+        const hideCardElement = $('#hideCardsId');
+        const showCardElement = $('#showCardsId');
+        const cardElement = $('.card');
+
+        const interval = 2000;
+
+        hideCardElement.click(function () {
+            hideCardElement.hide(interval);
+            showCardElement.show(interval);
+            cardElement.hide(interval);
+        });
+
+        showCardElement.click(function () {
+            hideCardElement.show(interval);
+            showCardElement.hide(interval);
+            cardElement.show(interval);
+        });
+    </script>
+}

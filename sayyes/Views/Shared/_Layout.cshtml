@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MusicLab</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/backImage.css" />
+    <link rel="stylesheet" href="~/css/menu.css" />
+    <link rel="stylesheet" href="~/css/paragraph.css" />
+    <link rel="stylesheet" href="~/css/card.css" />
+    <link rel="stylesheet" href="~/css/label.css" />
+    <link rel="stylesheet" href="~/css/body.css" />
+    <link rel="stylesheet" href="~/css/li.css" />
+</head>
+<script src="~/lib/jquery/dist/jquery.min.js"></script><!--подключение jquery-->
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@RenderSection("Scripts", required: false)      <!--подключение скриптов валидации после jquery-->
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color: white;">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index"><span style="color:black; font-family:Impact; font-size:30px; background-color:white; border-radius:10px;">BeStill</span>@*<img src="Img/LSKIcon.jpg" style="width:30px; height: 30px; border-radius: 10px;">*@</a>
+            <button class="navbar-toggler badge-light" style="border-radius:10px;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-down-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 4a.5.5 0 0 0-.374.832l4 4.5a.5.5 0 0 0 .748 0l4-4.5A.5.5 0 0 0 12 6H4z" />
+                </svg>
+            </button>
+            <a asp-controller="Song" asp-action="FavoriteSongs" class="btn btn-outline-info">Улюблені пісні</a>
+            <a asp-controller="Author" asp-action="GetAuthors" class="btn btn-outline-success">Перейти до виконавців</a>
+            <a asp-controller="Author" asp-action="Search" class="btn btn-outline-warning">Шукати виконавців</a>
+            <a asp-controller="Album" asp-action="Search" class="btn btn-outline-danger">Шукати альбоми</a>
+            <a asp-controller="Song" asp-action="Search" class="btn btn-outline-primary">Шукати пісні</a>
+            <a asp-controller="Song" asp-action="AlbumsIncludeSong" class="btn btn-outline-secondary">Альбоми, що містять пісню</a>
+        </nav>
+    </header>
+
+    <div class="container-fluid col-xl-12">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("pageScripts", required: false)
+</body>
+</html>

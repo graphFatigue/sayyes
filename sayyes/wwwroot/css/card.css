@@ -1,0 +1,30 @@
+﻿.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.perenos-hyphens {
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+} 
+
+.card {
+    box-shadow: 4px 2px 2px 3px #c82333;
+}
+
+.card-title {
+    font-family: Impact, serif;
+    font-size: 25px;
+}
+
+.card-buttons-group {
+    text-align: right;
+    padding: 10px;
+}
+
+.card-text {
+    white-space: pre-wrap;
+}
+
+
